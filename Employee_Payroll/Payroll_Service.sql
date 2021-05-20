@@ -20,5 +20,13 @@ Select salary from employee_payroll where Name = 'Alex Paul';
 Select Name from employee_payroll where Start_Date between Cast( '2020-03-10' as date) and date(now());     
 Alter table employee_payroll  add Gender varchar(1) after Name;   
 Update employee_payroll set Gender = 'M' where Name = 'Jack Parker' or Name = 'Riyan Smith' or Name = 'Nick Jonas' or Name = 'Alex Paul';   
-Update employee_payroll set Gender = 'F' where Name = 'Rachel Brown' or Name = 'Nia Patrik' or Name = 'Carol Tyler';            
+Update employee_payroll set Gender = 'F' where Name = 'Rachel Brown' or Name = 'Nia Patrik' or Name = 'Carol Tyler';     
+Select Sum(Salary) From employee_payroll where Gender = 'F' group by Gender;  
+Select Avg(Salary) From employee_payroll where Gender = 'F' group by Gender;
+Select Min(Salary) From employee_payroll where Gender = 'M' group by Gender;   
+Select Max(Salary) From employee_payroll where Gender = 'M' group by Gender;
+Select Count(Salary) From employee_payroll where Gender = 'M' group by Gender;
+Select Count(Gender) From employee_payroll;
+Select Count(Gender) From employee_payroll where Gender = 'M';
+
                                                                 
