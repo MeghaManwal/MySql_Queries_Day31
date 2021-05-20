@@ -15,4 +15,5 @@ Insert into employee_payroll ( Name, Salary, Start_Date) values ( 'Jack Parker',
 								( 'Alex Paul', '38000.0', '2020-03-15'),
 								( 'Nia Patrik', '57000.0', '2020-03-20'),
 								( 'Carol Tyler', '75000.0', '2020-04-05');
+Select * From employee_payroll;                                
                                                                 
