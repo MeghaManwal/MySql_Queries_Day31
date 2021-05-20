@@ -28,5 +28,12 @@ Select Max(Salary) From employee_payroll where Gender = 'M' group by Gender;
 Select Count(Salary) From employee_payroll where Gender = 'M' group by Gender;
 Select Count(Gender) From employee_payroll;
 Select Count(Gender) From employee_payroll where Gender = 'M';
-
+Alter table employee_payroll  add PhoneNumber varchar(10) after Gender; 
+Alter table employee_payroll  add Address varchar(45) after PhoneNumber;
+Alter table employee_payroll  add Department varchar(45) Not Null after Address;  
+Update employee_payroll set Department = 'IT' where Name = 'Riyan Smith' or Name = 'Nia Patrik';
+Update employee_payroll set Department = 'HR' where Name = 'Jack Parker' or Name = 'Nick Jonas';
+Update employee_payroll set Department = 'Finance' where Name = 'Carol Tyler' or Name = 'Rachel Brown';
+Update employee_payroll set Department = 'Marketing' where Name = 'Alex Paul';
+   
                                                                 
