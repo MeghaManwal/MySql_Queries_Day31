@@ -35,5 +35,17 @@ Update employee_payroll set Department = 'IT' where Name = 'Riyan Smith' or Name
 Update employee_payroll set Department = 'HR' where Name = 'Jack Parker' or Name = 'Nick Jonas';
 Update employee_payroll set Department = 'Finance' where Name = 'Carol Tyler' or Name = 'Rachel Brown';
 Update employee_payroll set Department = 'Marketing' where Name = 'Alex Paul';
-   
+Alter table employee_payroll add BasicPay double after Salary;
+Alter table employee_payroll add Deductions double after BasicPay;
+Alter table employee_payroll add TaxablePay double after Deductions;
+Alter table employee_payroll add IncomeTax double after TaxablePay;
+Alter table employee_payroll add NetPay double after IncomeTax; 
+Update employee_payroll set Address = 'Default';
+Update employee_payroll set PhoneNumber = 'Null';
+Update employee_payroll set BasicPay = '0.0';
+Update employee_payroll set Deductions = '0.0';
+Update employee_payroll set TaxablePay = '0.0';
+Update employee_payroll set IncomeTax = '0.0';
+Update employee_payroll set NetPay = '0.0';
+Select * From employee_payroll;    
                                                                 
