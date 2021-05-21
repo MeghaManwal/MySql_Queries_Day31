@@ -47,5 +47,8 @@ Update employee_payroll set Deductions = '0.0';
 Update employee_payroll set TaxablePay = '0.0';
 Update employee_payroll set IncomeTax = '0.0';
 Update employee_payroll set NetPay = '0.0';
-Select * From employee_payroll;    
+Select * From employee_payroll;  
+Insert into employee_payroll ( Name, Gender, PhoneNumber, Address, Department, Salary, BasicPay, Deductions, TaxablePay, IncomeTax, NetPay, Start_Date) 
+		      values ( 'Rachel Brown', 'F', 'Null', 'Default', 'Sales', '65000', '30000', '5000', '5000','10000', '45000', '2020-01-15');
+Select * From employee_payroll where Name = 'Rachel Brown';                    
                                                                 
