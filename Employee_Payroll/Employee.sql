@@ -11,7 +11,7 @@ Insert into Employee ( FirstName, LastName, Experience, emailId)
                      ( 'Riyan',  'Smith', '3 Years', 'riyan@abc.co.in'),
                      ( 'Sandeep','Rawat', '2 Years', 'rawatSan2@gmial.com'),
                      ( 'Shikha','Chauhan', '2 Years', 'sikha23@pqr.co.in'),
-		     ( 'Rahul','Roy', '7 Years', 'rahulroy@agen.co.in');
+		             ( 'Rahul','Roy', '7 Years', 'rahulroy@agen.co.in');
  Select * From Employee;   
  Select * From employee where FirstName = 'Nikita';
  Select Experience From employee where FirstName = 'Nikita';
@@ -19,3 +19,4 @@ Insert into Employee ( FirstName, LastName, Experience, emailId)
  Select AVG(EmployeeId) From employee where Experience = '2 Years';
  Select Count(EmployeeId) From employee where Experience = '2 Years';
  Select Count(EmployeeId) From employee ;
+ Delete  From Employee where firstname = 'riya';

@@ -17,4 +17,5 @@ Select * From Company where CompanyName = 'Park';
 Select NumbOfEmployee From Company where CompanyName = 'Park';
 Select SUM(NumbOfEmployee) From Company ;                                                                              
 Select AVG(NumbOfEmployee) From Company ;
-Select Count(CompanyID) From Company ;                                                                                    
+Select Count(CompanyID) From Company ;  
+                                                                                
