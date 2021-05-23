@@ -11,9 +11,10 @@ Insert into Department ( DeptId, EmpId, DeptName) values ( '1', '1', 'Finance'),
 							 ( '3', '3', 'Marketing'),
 							 ( '4', '4', 'HR'),
 						         ( '5', '5', 'IT');
-Select * From department;  
+Select * From department  
 Select * From department where EmpId = '2'; 
 Select DeptName From department where EmpId = '2';
 Select SUM(DeptId) From Department ; 
 Select AVG(DeptId) From Department ;
-Select Count(DeptId) From Department ;                                                               
+Select Count(DeptId) From Department ; 
+Select Min(DeptId) From Department ;                                                               

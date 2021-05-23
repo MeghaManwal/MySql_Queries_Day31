@@ -1,6 +1,8 @@
 CREATE database Payroll_Service;
 show databases;
 use Payroll_Service;
+
+/* TO CREATE TABLE*/
 CREATE table Employee_Payroll (
 ID          int NOT Null auto_increment,
 Name        varchar(45) Not Null,
@@ -8,6 +10,8 @@ Salary      double Not Null,
 Start_Date  date Not Null,
 Primary key(ID) );
 Select * From employee_payroll;
+
+/* Insert Data to the Table */
 Insert into employee_payroll ( Name, Salary, Start_Date) values ( 'Jack Parker', '45000.0', '2020-01-15'),
                                                                 ( 'Riyan Smith', '50000.0', '2020-02-01'),
 								( 'Rachel Brown', '65000.0', '2020-01-01'),
@@ -15,6 +19,8 @@ Insert into employee_payroll ( Name, Salary, Start_Date) values ( 'Jack Parker',
 								( 'Alex Paul', '38000.0', '2020-03-15'),
 								( 'Nia Patrik', '57000.0', '2020-03-20'),
 								( 'Carol Tyler', '75000.0', '2020-04-05');
+                                
+/*Queries for Reterive, Alter and Update Operations*/                                
 Select * From employee_payroll;   
 Select salary from employee_payroll where Name = 'Alex Paul'; 
 Select Name from employee_payroll where Start_Date between Cast( '2020-03-10' as date) and date(now());     
@@ -48,7 +54,15 @@ Update employee_payroll set TaxablePay = '0.0';
 Update employee_payroll set IncomeTax = '0.0';
 Update employee_payroll set NetPay = '0.0';
 Select * From employee_payroll;  
+
+/*Insert Duplicate Entry With Different Id*/
 Insert into employee_payroll ( Name, Gender, PhoneNumber, Address, Department, Salary, BasicPay, Deductions, TaxablePay, IncomeTax, NetPay, Start_Date) 
-		      values ( 'Rachel Brown', 'F', 'Null', 'Default', 'Sales', '65000', '30000', '5000', '5000','10000', '45000', '2020-01-15');
-Select * From employee_payroll where Name = 'Rachel Brown';                    
-                                                                
+              values ('Terissa','F','Null','Default','Marketing','40000','25000','5000','2500','3000','29500','2020-10-22');
+Insert into employee_payroll ( Name, Gender, PhoneNumber, Address, Department, Salary, BasicPay, Deductions, TaxablePay, IncomeTax, NetPay, Start_Date) 
+		      values ( 'Rachel Brown', 'F', 'Null', 'Default', 'Sales', '65000', '0', '0', '0','0', '0', '2020-01-15');              
+Select * From employee_payroll where Name = 'Rachel Brown';      
+Insert into employee_payroll ( Name, Gender, PhoneNumber, Address, Department, Salary, BasicPay, Deductions, TaxablePay, IncomeTax, NetPay, Start_Date) 
+			  values ('Terissa','F','Null','Default','Sales','30000','0.0','0.0','0.0','0.0','0.0','2020-10-22');         
+Insert into employee_payroll ( Name, Gender, PhoneNumber, Address, Department, Salary, BasicPay, Deductions, TaxablePay, IncomeTax, NetPay, Start_Date) 
+		      values ( 'Rachel Brown', 'F', 'Null', 'Default', 'Marketing', '65000', '30000', '5000', '5000','10000', '45000', '2020-01-15');  
+Select * From employee_payroll;               
